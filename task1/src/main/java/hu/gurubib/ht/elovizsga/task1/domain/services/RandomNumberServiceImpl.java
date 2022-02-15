@@ -8,10 +8,10 @@ import java.util.Random;
 public class RandomNumberServiceImpl implements RandomNumberService {
 
     @Override
-    public String random(int exclusiveLimit) {
+    public String random(int max) {
         final Random random = new Random();
         final int min = 1;
-        return String.valueOf(random.nextInt((exclusiveLimit + 1) - min) + min);
+        return String.valueOf(random.nextInt((max + 1) - min) + min);
     }
 
 }
